@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blanco: #F4F4F8;
+    --negro: #1C1C1C;
+    --mostaza: #FED766;
+    --azul: #009FB7;
+}
+
+/* -- Globales -- */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+/* -- Cabecera -- */
+header {
+    background-color: var(--negro);
+    min-height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.logo-cabecera {
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: row;
+}
+
+header div.logo-cabecera span {
+    color: var(--azul);
+}
+
+header div.logo-cabecera span.animacion-logo {
+    position: relative;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: .5px var(--mostaza);
+}
+
+span.animacion-logo::before {
+    content: attr(texto);
+    position: absolute;
+    color: var(--mostaza);
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 4px solid var(--mostaza);
+}
+
+span.animacion-logo:hover::before {
+    width: 100%;
+}
