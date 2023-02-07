@@ -32,7 +32,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 header div.logo-cabecera {
@@ -54,7 +54,7 @@ header div.logo-cabecera span.animacion-logo {
     -webkit-text-stroke: .5px var(--mostaza);
 }
 
-span.animacion-logo::before {
+header div.logo-cabecera span.animacion-logo::before {
     content: attr(texto);
     position: absolute;
     color: var(--mostaza);
@@ -64,6 +64,6 @@ span.animacion-logo::before {
     border-right: 4px solid var(--mostaza);
 }
 
-span.animacion-logo:hover::before {
+header div.logo-cabecera span.animacion-logo:hover::before {
     width: 100%;
 }
