@@ -43,7 +43,6 @@ header div.logo-cabecera {
     display: flex;
     flex-direction: row;
 }
-
 header div.logo-cabecera span {
     color: var(--azul);
 }
@@ -52,9 +51,8 @@ header div.logo-cabecera span.animacion-logo {
     position: relative;
     text-decoration: none;
     color: transparent;
-    -webkit-text-stroke: .5px var(--mostaza);
+    -webkit-text-stroke: .65px var(--mostaza);
 }
-
 header div.logo-cabecera span.animacion-logo::before {
     content: attr(texto);
     position: absolute;
@@ -64,7 +62,12 @@ header div.logo-cabecera span.animacion-logo::before {
     transition: 1s;
     border-right: 4px solid var(--mostaza);
 }
-
 header div.logo-cabecera span.animacion-logo:hover::before {
     width: 100%;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
