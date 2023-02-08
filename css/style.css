@@ -4,6 +4,7 @@
     --blanco: #F4F4F8;
     --blanco-hover: #b6b6cc;
     --negro: #1C1C1C;
+    --negro-claro: #2b2b2b;
     --mostaza: #FED766;
     --azul: #009FB7;
 }
@@ -68,17 +69,32 @@ header div.logo-cabecera span.animacion-logo:hover::before {
 }
 
 header nav {
+    height: 120px;
+}
+header nav .barra-navegacion {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
+    height: 100%;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
 }
-header nav a {
+header nav * > li {
+    list-style: none;
+}
+header nav .barra-navegacion .opcion-menu {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+header nav .barra-navegacion .opcion-menu a,
+header nav .barra-navegacion .opcion-menu .menu-desplegable li a {
     color: var(--blanco);
 }
-header nav a:hover  {
-    color: var(--blanco-hover);
-}
+
 nav {
     background-color: var(--navColor);
 }
@@ -87,20 +103,30 @@ nav {
     background-color: var(--navHover);
 }
 
-.dropdown-1 {
+.menu-desplegable {
     position: absolute;
+    top: 120px;
+    left: 0;
     display: none;
-    background-color: var(--dropdown);
+    background-color: var(--negro-claro);
     padding: 0;
 }
 
-.menu-1:hover .dropdown-1 {
+.opcion-menu:hover {
+    background-color: var(--negro-claro);
+    cursor: pointer;
+}
+.opcion-menu:hover .menu-desplegable {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    min-height: 80px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
-
-.dropdown-1 li {
-    border-bottom: 1px dotted white;
+.menu-desplegable li a:hover {
+    color: var(--blanco-hover)
 }
 
 header .nav-lateral {
