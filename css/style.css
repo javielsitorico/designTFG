@@ -23,7 +23,12 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     margin: 0;
 }
 
@@ -46,6 +51,7 @@ header div.logo-cabecera {
     flex-direction: row;
     width: fit-content;
 }
+
 header div.logo-cabecera span {
     color: var(--azul);
 }
@@ -60,6 +66,7 @@ header div.logo-cabecera .logo--animacion__word {
     position: relative;
     overflow: hidden;
 }
+
 header div.logo-cabecera .logo--animacion__char-inner {
     display: inline-block;
 }
@@ -75,6 +82,7 @@ header div.logo-cabecera .logo--animacion__char-inner:after {
 header nav {
     height: 120px;
 }
+
 header nav .barra-navegacion {
     display: flex;
     flex-direction: row;
@@ -85,15 +93,18 @@ header nav .barra-navegacion {
     padding: 0;
     margin: 0;
 }
-header nav * > li {
+
+header nav *>li {
     list-style: none;
 }
+
 header nav .barra-navegacion .opcion-menu {
     min-height: 100%;
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
+
 header nav .barra-navegacion .opcion-menu a,
 header nav .barra-navegacion .opcion-menu .menu-desplegable li a {
     color: var(--blanco);
@@ -120,6 +131,7 @@ nav {
     background-color: var(--negro-claro);
     cursor: default;
 }
+
 .opcion-menu:hover .menu-desplegable {
     display: flex;
     flex-direction: row;
@@ -129,6 +141,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 header nav .barra-navegacion .opcion-menu .menu-desplegable li:hover a {
     color: var(--blanco-hover);
     cursor: pointer;
@@ -136,5 +149,31 @@ header nav .barra-navegacion .opcion-menu .menu-desplegable li:hover a {
 
 header .nav-lateral {
     display: flex;
+    align-items: center;
     gap: 20px;
+}
+
+.nav-lateral .nav-lateral--carrito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid var(--blanco-hover);
+    border-radius: 5px;
+}
+
+.nav-lateral .nav-lateral--carrito svg {
+    padding: 3px 5px;
+}
+
+.nav-lateral--carrito--num-productos {
+    color: var(--negro);
+    background-color: var(--blanco);
+    height: max-content;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
