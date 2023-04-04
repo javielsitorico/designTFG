@@ -3,6 +3,7 @@
 :root {
     --blanco: #F4F4F8;
     --blanco-hover: #d4d4e0;
+    --sombra: rgba(0, 0, 0, 0.125);
     --negro: #1C1C1C;
     --negro-claro: #2b2b2b;
     --mostaza: #FED766;
@@ -176,4 +177,35 @@ header .nav-lateral {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/* -- Contenedor principal -- */
+main {
+    margin: 30px 0;
+}
+
+main section {
+    margin: 20px;
+}
+
+.display-productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.display-productos .producto--contenedor {
+    margin: 22px;
+}
+
+.producto {
+    border-radius: 5px;
+    border: 1px solid var(--sombra);
+}
+
+.producto .producto--imagen {
+    max-width: 100%;
+    height: auto;
 }
